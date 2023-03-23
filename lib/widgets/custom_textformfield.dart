@@ -61,7 +61,6 @@ class CustomTextFormField extends StatelessWidget {
   final InputBorder? enabledBorder;
   final InputBorder? focusedBorder;
   final InputBorder? errorBorder;
-
   final TextStyle? hintStyle;
   final TextStyle? style;
   final List<TextInputFormatter>? inputFormatters;
@@ -92,6 +91,7 @@ class CustomTextFormField extends StatelessWidget {
       autovalidateMode: autovalidateMode,
       onChanged: onChanged,
       validator: validator,
+      textInputAction: textInputAction,
       decoration: InputDecoration(
         labelStyle: const TextStyle(color: Colors.black),
         label: Text(label ?? ""),
