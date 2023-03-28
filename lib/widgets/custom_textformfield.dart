@@ -41,6 +41,7 @@ class CustomTextFormField extends StatelessWidget {
     this.focusNode,
     this.autovalidateMode,
     this.prefixIconColor,
+    this.borderRadius,
   });
 
   final TextEditingController? controller;
@@ -81,6 +82,7 @@ class CustomTextFormField extends StatelessWidget {
   final FocusNode? focusNode;
   final TextInputAction? textInputAction = TextInputAction.next;
   final AutovalidateMode? autovalidateMode;
+  final double? borderRadius;
 
   @override
   Widget build(BuildContext context) {
@@ -104,24 +106,28 @@ class CustomTextFormField extends StatelessWidget {
             color: AppColors().primaryColor,
             width: 2,
           ),
+          borderRadius: BorderRadius.circular(borderRadius ?? 0),
         ),
         errorBorder: OutlineInputBorder(
           borderSide: BorderSide(
             color: AppColors().primaryRedColor,
             width: 2,
           ),
+          borderRadius: BorderRadius.circular(borderRadius ?? 0),
         ),
         focusedErrorBorder: OutlineInputBorder(
           borderSide: BorderSide(
             color: AppColors().primaryRedColor,
             width: 2,
           ),
+          borderRadius: BorderRadius.circular(borderRadius ?? 0),
         ),
         enabledBorder: OutlineInputBorder(
           borderSide: BorderSide(
             color: AppColors().primaryColor,
             width: 2,
           ),
+          borderRadius: BorderRadius.circular(borderRadius ?? 0),
         ),
       ),
     );
